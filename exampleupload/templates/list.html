@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <div class="row">
+      {% for obj in objects_list %}
+        <div class="row">
+                    {% if obj.photo %}
+{#                   <a href=""><img src='{{ obj.photo.url }}' class='img-responsive'/></a>#}
+                        <a href="{{ obj.photo.url }}"><img src='{{ obj.photo.url }}' class='img-responsive'/></a>
+                    {% endif %}
+                                    <p><a href="{% url 'size' obj.id %}" class="btn btn-primary" role="button">View</a></p>
+        </div>
+      {% endfor %}
+  </div>
+</body>
+</html>
