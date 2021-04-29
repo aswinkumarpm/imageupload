@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<form action="{% url 'adss' %}" method="post" enctype="multipart/form-data">
+					{% csrf_token %}
+					<div class="row contact_left_grid">
+						<div class="col-md-6 con-left">
+							<div class="form-group">
+								<label for="validationCustom01 my-2">Name</label>
+								<input class="form-control" type="text" name="name" placeholder="" required="">
+							</div>
+							<div class="form-group">
+								<label for="exampleFormControlInput1">Email</label>
+								<input class="form-control" type="email" name="email" placeholder="" required="">
+							</div>
+							<div class="form-group">
+								<label for="validationCustom03 my-2">Subject</label>
+								<input class="form-control" type="text" name="subject" placeholder="" required="">
+							</div>
+						</div>
+						<div class="col-md-6 con-right">
+						<div class="form-group">
+							<a>upload photo</a>
+							<input type="file" name="photo" class="form-control" placeholder="Upload your photo" title="Please Upload your photo" required="">
+						</div>
+						<div class="col-md-6 con-right">
+							<a>upload the video file</a>
+							<input type="file" name="video" class="form-control" placeholder="Upload your file" title="Please Upload your certificate" required="">
+
+						</div>
+
+														 <button type="submit">Upload</button>
+
+					</div>
+					</div>
+				</form>
+</body>
+</html>

@@ -10,6 +10,7 @@
         <div class="row">
                     {% if obj.photo %}
 {#                   <a href=""><img src='{{ obj.photo.url }}' class='img-responsive'/></a>#}
+            {{ obj.photo.url }}
                         <a href="{{ obj.photo.url }}"><img src='{{ obj.photo.url }}' class='img-responsive'/></a>
                     {% endif %}
                                     <p><a href="{% url 'size' obj.id %}" class="btn btn-primary" role="button">View</a></p>

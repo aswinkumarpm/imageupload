@@ -4,7 +4,7 @@ from django.contrib import admin
 from .views import (
     upload,
     file_list,
-    size,resized
+    size,resized, adss
 )
 
 
@@ -13,5 +13,6 @@ urlpatterns = [
     url(r'^file_list$', file_list, name='file_list'),
     url(r'^(?P<id>\d+)/$', size, name='size'),
     url(r'^resized$', resized, name='resized$'),
+    url(r'^adss', adss, name='adss'),
 
 ]
